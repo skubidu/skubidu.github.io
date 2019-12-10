@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Website</title>
+    <link>https://skubidu.github.io/</link>
+    <description>Recent content on My Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 10 Dec 2019 18:49:15 +0100</lastBuildDate>
+    
+	<atom:link href="https://skubidu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://skubidu.github.io/about/</link>
+      <pubDate>Tue, 10 Dec 2019 18:49:15 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/about/</guid>
+      <description>Some facts about me but not to much.
+Coming soon&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Python Print</title>
+      <link>https://skubidu.github.io/blog/python-print/</link>
+      <pubDate>Tue, 10 Dec 2019 18:42:54 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/python-print/</guid>
+      <description>Python Print Print is very useful!
+print(&amp;#34;Lenin&amp;#34;) </description>
+    </item>
+    
+  </channel>
+</rss>
