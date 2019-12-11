@@ -160,7 +160,7 @@ get_ipython().run_line_magic(<span style="color:#0ff;font-weight:bold"></span><s
 df_bs = pd.read_csv(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">/Users/ME/Desktop/hour.csv</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
 </code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Printing First few recors</span>
 df_bs.head()
-</code></pre></div><p>Output: Prints&hellip; [Table]</p>
+</code></pre></div><p>Output: Prints Dataset&hellip; [Table]</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Shape of the Dataset</span>
 df_bs.shape
 </code></pre></div><p>Output: (17379,17)</p>
@@ -176,13 +176,117 @@ df_bs.rename(columns{<span style="color:#0ff;font-weight:bold"></span><span styl
                         <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hr</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hour</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
                         <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">yr</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">year</span><span style="color:#0ff;font-weight:bold">&#39;</span>},inplace=True)
 </code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bs.head()
-</code></pre></div><p>Output: Prints output&hellip; [Table]</p>
+</code></pre></div><p>Output: Prints the renamed Dataset &hellip; [Table]</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bs.dtypes
-</code></pre></div><p>Output: Prints dtypes (Datatypes of Attributes)&hellip; [List]</p>
+</code></pre></div><p>Output: Prints dtypes (Datatypes of Attributes) &hellip; [List]</p>
+<table>
+<thead>
+<tr>
+<th align="center">Attribute</th>
+<th align="center">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">id</td>
+<td align="center">int64</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="center">season</td>
+<td align="center">int64</td>
+</tr>
+<tr>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># date time conversion</span>
 df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">datetime</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = pd.to_datetime(df_bs.datetime)
 <span style="color:#007f7f"># categorical variables</span>
-df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">&#39;</span>]
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">season</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.season.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">holiday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.holiday_ind.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weekday</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.weekday.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weather_con</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.weather_con.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">workingday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.workingday_ind.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">month</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.month.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">year</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.year.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hour</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = df_bs.hour.astype(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">category</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bs.dtypes
+</code></pre></div><p>Output: Prints conversion of dtypes &hellip; [List]</p>
+<table>
+<thead>
+<tr>
+<th align="center">Attribute</th>
+<th align="center">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">id</td>
+<td align="center">int64</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">datetime64[ns]</td>
+</tr>
+<tr>
+<td align="center">season</td>
+<td align="center">category</td>
+</tr>
+<tr>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Convert the categorical features</span>
+<span style="color:#007f7f"># Creating dummies for all these variables</span>
+d_season = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">season</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">season</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_hol_i = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">holiday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hol</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_wkd = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weekday</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weekday</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_w_con = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weather_con</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">w_con</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_wd_i = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">workingday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">wd_i</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_mon = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">month</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">mon</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_yr = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">year</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">yr</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+d_hr = pd.get_dummies(df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hour</span><span style="color:#0ff;font-weight:bold">&#39;</span>], prefix=<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hour</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Check for Missing observations</span>
+(df_bs.isnull().sum() / <span style="color:#fff;font-weight:bold">len</span>(df_bs)).sort_values(ascending=False)
+</code></pre></div><p>Output: Missing Observation&hellip; [List]</p>
+<table>
+<thead>
+<tr>
+<th align="center">Value</th>
+<th align="center">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">weekday</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td align="center">season</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Test - Distribution of Dep Var</span>
+<span style="color:#fff;font-weight:bold">from</span> scipy <span style="color:#fff;font-weight:bold">import</span> stats
+<span style="color:#fff;font-weight:bold">from</span> scipy.stats <span style="color:#fff;font-weight:bold">import</span> norm, skew
+
 </code></pre></div>
   </article>
 </section>
