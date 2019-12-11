@@ -6,10 +6,42 @@
     <description>Recent content on My Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Dec 2019 10:24:25 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 16:43:40 +0100</lastBuildDate>
     
 	<atom:link href="https://skubidu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Case Study - Bike Sharing Dataset</title>
+      <link>https://skubidu.github.io/blog/art006/</link>
+      <pubDate>Wed, 11 Dec 2019 16:43:40 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art006/</guid>
+      <description>Case Study Overview   The data can be accessed using following link: Dataset Source
+  Objective
+ This dataset contain the hourly and daily count of rental bikes between years 2011 and 2012 in capital bikeshare syste with the corresponding weather and seasonal information.    The regression goal is to predict beke count given various attributs.
+  Download the Data and save it in the Folder Desktop/Python/Data</description>
+    </item>
+    
+    <item>
+      <title>Advantages and Limitation of Linear Regression</title>
+      <link>https://skubidu.github.io/blog/art005/</link>
+      <pubDate>Wed, 11 Dec 2019 16:28:20 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art005/</guid>
+      <description>Advantages and Disadvantages - Linear Regression Anvantages  Simple and efficient. Easily interpretable. Low variance ML model. Easy to implement as compared other complex ML approaches. If the relationshiop between the independet and dependet variable have a linear relationship, this algorithm is the best to use because it&#39;s the least complex as compared to other ML methods.  Disadvantages  It requires tranformation of non-linear features. Non-linear interactions between predictors are not captured.</description>
+    </item>
+    
+    <item>
+      <title>Various Concepts Around Linear Regression</title>
+      <link>https://skubidu.github.io/blog/art004/</link>
+      <pubDate>Wed, 11 Dec 2019 14:43:13 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art004/</guid>
+      <description>Various Concepts Around Linear Regression Interpreting Regression Output Slope $(\beta_i)$ / Intercept-$(\beta_0)$ Estimated chage in the average value of Y resulting from 1-unit change in the input feature $X_i.$ Whereas intercept term measured the average Value of Y When X = 0.
+$R^2$ R-square explains what proprtion of the total variation is explained by the regression equation, which obviously implies that higher R-square values indicates better model.
+Adjusted $R^2$ Since R square will continue increasing with each additional regressor (x variable) coming in, it tends to overfit the data.</description>
+    </item>
     
     <item>
       <title>Estimation and Prediction Linear Regression</title>

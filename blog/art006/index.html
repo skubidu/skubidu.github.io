@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="description" content="My Website">
+    <meta name="keywords" content="blog,developer,AI,ML,BI,DataScience">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Case Study - Bike Sharing Dataset"/>
+<meta name="twitter:description" content="Case Study Overview   The data can be accessed using following link: Dataset Source
+  Objective
+ This dataset contain the hourly and daily count of rental bikes between years 2011 and 2012 in capital bikeshare syste with the corresponding weather and seasonal information.    The regression goal is to predict beke count given various attributs.
+  Download the Data and save it in the Folder Desktop/Python/Data"/>
+
+    <meta property="og:title" content="Case Study - Bike Sharing Dataset" />
+<meta property="og:description" content="Case Study Overview   The data can be accessed using following link: Dataset Source
+  Objective
+ This dataset contain the hourly and daily count of rental bikes between years 2011 and 2012 in capital bikeshare syste with the corresponding weather and seasonal information.    The regression goal is to predict beke count given various attributs.
+  Download the Data and save it in the Folder Desktop/Python/Data" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://skubidu.github.io/blog/art006/" />
+<meta property="article:published_time" content="2019-12-11T16:43:40+01:00" />
+<meta property="article:modified_time" content="2019-12-11T16:43:40+01:00" />
+
+
+    
+      <base href="https://skubidu.github.io/blog/art006/">
+    
+    <title>
+  Case Study - Bike Sharing Dataset · My Website
+</title>
+
+    
+      <link rel="canonical" href="https://skubidu.github.io/blog/art006/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://skubidu.github.io/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://skubidu.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://skubidu.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.60.1" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://skubidu.github.io/">
+      My Website
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/blog/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Case Study - Bike Sharing Dataset</h1>
+    </header>
+
+    <h1 id="case-study-overview">Case Study Overview</h1>
+<ol>
+<li>
+<p>The data can be accessed using following link:
+<a href="https://archive.Ics.Uci.Edu/ml/datasets/bike+sharing+dataset">Dataset Source</a></p>
+</li>
+<li>
+<p>Objective</p>
+<ul>
+<li>This dataset contain the hourly and daily count of rental bikes between years 2011 and 2012 in capital bikeshare syste with the corresponding weather and seasonal information.</li>
+</ul>
+</li>
+<li>
+<p>The regression goal is to predict beke count given various attributs.</p>
+</li>
+<li>
+<p>Download the Data and save it in the Folder <strong>Desktop/Python/Data</strong></p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Settin the working directory</span>
+<span style="color:#fff;font-weight:bold">import</span> os
+os.chdir(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">/Users/ME/Desktop/Python/Data</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Supress WArning message</span>
+<span style="color:#fff;font-weight:bold">import</span> warnings
+<span style="color:#fff;font-weight:bold">def</span> fxn():
+    warnings.warn(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#0ff;font-weight:bold">depracted</span><span style="color:#0ff;font-weight:bold">&#34;</span>, DepractionWarning)
+<span style="color:#fff;font-weight:bold">with</span> warnings.catch_warnings():
+    warnings.simplefilter(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#0ff;font-weight:bold">ignore</span><span style="color:#0ff;font-weight:bold">&#34;</span>)
+    fxn()
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> sys
+sys.path = [<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">/Users/ME/Desktop/Python/package</span><span style="color:#0ff;font-weight:bold">&#39;</span>] + sys.path
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Importing relevant libraries</span>
+
+<span style="color:#fff;font-weight:bold">import</span> scorecardpy <span style="color:#fff;font-weight:bold">as</span> sc
+<span style="color:#fff;font-weight:bold">import</span> panda <span style="color:#fff;font-weight:bold">as</span> pd
+<span style="color:#fff;font-weight:bold">import</span> numpy <span style="color:#fff;font-weight:bold">as</span> np
+<span style="color:#fff;font-weight:bold">from</span> sklearn <span style="color:#fff;font-weight:bold">import</span> preprocessing
+<span style="color:#fff;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fff;font-weight:bold">as</span> plt
+get_ipython().run_line_magic(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">matplotlib</span><span style="color:#0ff;font-weight:bold">&#39;</span>, inline)
+<span style="color:#fff;font-weight:bold">from</span> sklearn.linear_model <span style="color:#fff;font-weight:bold">import</span> LinearRegression
+<span style="color:#fff;font-weight:bold">from</span> sklearn.model_selection <span style="color:#fff;font-weight:bold">import</span> train_test_split
+<span style="color:#fff;font-weight:bold">import</span> seaborn <span style="color:#fff;font-weight:bold">as</span> sns
+<span style="color:#fff;font-weight:bold">import</span> scipy.status <span style="color:#fff;font-weight:bold">as</span> stats
+<span style="color:#fff;font-weight:bold">from</span> sklearn <span style="color:#fff;font-weight:bold">import</span> metrics
+<span style="color:#fff;font-weight:bold">from</span> sklearn <span style="color:#fff;font-weight:bold">import</span> preprocessing
+<span style="color:#fff;font-weight:bold">from</span> sklearn <span style="color:#fff;font-weight:bold">import</span> linear_model
+<span style="color:#fff;font-weight:bold">from</span> sklearn.model_selection <span style="color:#fff;font-weight:bold">import</span> cross_val_score
+<span style="color:#fff;font-weight:bold">from</span> sklearn.model_selection <span style="color:#fff;font-weight:bold">import</span> train_test_split
+<span style="color:#fff;font-weight:bold">from</span> sklearn.model_selection <span style="color:#fff;font-weight:bold">import</span> cross_val_predict
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Reading the dataset</span>
+df_bs = pd.read_csv(<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">/Users/ME/Desktop/hour.csv</span><span style="color:#0ff;font-weight:bold">&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Printing First few recors</span>
+df_bs.head()
+</code></pre></div><p>Output: Prints&hellip; [Table]</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Shape of the Dataset</span>
+df_bs.shape
+</code></pre></div><p>Output: (17379,17)</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Renaming the Data</span>
+df_bs.rename(columns{<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">instant</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">id</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">dteday</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">datetime</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">holiday</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">holiday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">workingday</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">workingday_ind</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weathersit</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">weather_con</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hum</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">humidity</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">mth</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">month</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">cnt</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">total_count</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hr</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">hour</span><span style="color:#0ff;font-weight:bold">&#39;</span>,
+                        <span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">yr</span><span style="color:#0ff;font-weight:bold">&#39;</span>:<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">year</span><span style="color:#0ff;font-weight:bold">&#39;</span>},inplace=True)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bs.head()
+</code></pre></div><p>Output: Prints output&hellip; [Table]</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bs.dtypes
+</code></pre></div><p>Output: Prints dtypes (Datatypes of Attributes)&hellip; [List]</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># date time conversion</span>
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">datetime</span><span style="color:#0ff;font-weight:bold">&#39;</span>] = pd.to_datetime(df_bs.datetime)
+<span style="color:#007f7f"># categorical variables</span>
+df_bs[<span style="color:#0ff;font-weight:bold"></span><span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">&#39;</span>]
+</code></pre></div>
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+    
+    
+    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+
+ <script>
+renderMathInElement(
+	document.body,
+	{
+    	delimiters: [
+        	{left: "$$", right: "$$", display: true},
+        	{left: "\\[", right: "\\]", display: true},
+        	{left: "$", right: "$", display: false},
+        	{left: "\\(", right: "\\)", display: false}
+        ]
+	}
+);
+</script>
+
+
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
