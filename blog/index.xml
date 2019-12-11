@@ -6,10 +6,49 @@
     <description>Recent content in Blogs on My Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Dec 2019 18:42:54 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 10:24:25 +0100</lastBuildDate>
     
 	<atom:link href="https://skubidu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Estimation and Prediction Linear Regression</title>
+      <link>https://skubidu.github.io/blog/art003/</link>
+      <pubDate>Wed, 11 Dec 2019 10:24:25 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art003/</guid>
+      <description>Linear Regression - Illustrative Example   Linear Regression
+  Inference of Parameters - Significance of Estimate  The final equation for LR (vectorised format):
+$$ \hat{Y} = h_{\Theta}(X) = \Theta.X = [\Theta_0 + \Theta_1X_1 + \Theta_2X_2 + \ldots + \Theta_nX_n] $$ MSE (Mean Square Function) - cost function of LR model:
+$$ MSE(X, h_\Theta) = \frac{1}{n} \sum_{i=1}^{n}(Theta^{T}\cdot X_{(i)}-y_{(i)})^2 $$ The estimated coefficients:
+$$ [(X^T\cdot X) - \ ^1X^{T}\cdot Y] $$  Steps to Build a Linear Regression Model  Data cleaning - missing calues and outlier treatment Check for multi-collinearity Feature selection Build the Model on Train Data Performance evalution on the test data  </description>
+    </item>
+    
+    <item>
+      <title>Linear Models</title>
+      <link>https://skubidu.github.io/blog/art002/</link>
+      <pubDate>Wed, 11 Dec 2019 09:37:33 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art002/</guid>
+      <description>Linear Regression Content  Introduction - Linear Regression Estimation and prediction - Linear Regression Varios concepts anround Linear Regression Advantages and limitation of Linear Regression Case study - bike sharing dataset  Intruction to Linear Regression Linear Regression - An Overview Supervised algorithm for Regression. A form of a parametric model.
+LR refers to a model which can show relationship between two variables.
+Linear relationsship between tow or more variables.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learing Algorithms in 7 Days</title>
+      <link>https://skubidu.github.io/blog/art001/</link>
+      <pubDate>Wed, 11 Dec 2019 09:23:28 +0100</pubDate>
+      
+      <guid>https://skubidu.github.io/blog/art001/</guid>
+      <description>By Shovon Sengupta
+7 Key Algorithms in just 7 Days Instructor Shovon Sengupta
+  Over 10 years of experience as Data Science Professional with experiences in Advanced Machine Learning an Predictive Analytics
+  Currently working in Capacity as a Senior Lead Data Scientist in one of the USA based financial giant
+  Specializie in Deep Learnin, Reinforcement Learning
+  Contact: https://www.linkedin.com/in/shovon-sengupta-272aa917/
+  Course Overview Section 1 Linear Models</description>
+    </item>
     
     <item>
       <title>Python Print</title>
@@ -18,7 +57,9 @@
       
       <guid>https://skubidu.github.io/blog/python-print/</guid>
       <description>Python Print Print is very useful!
-print(&amp;#34;Lenin&amp;#34;) My Next article Here I Post my next article which hopefully will be updated</description>
+print(&amp;#34;Lenin&amp;#34;) My next article Here I Post my next article which hopefully will be updated!
+It was updated, I am so excited!
+New Title </description>
     </item>
     
   </channel>

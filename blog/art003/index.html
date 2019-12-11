@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="description" content="My Website">
+    <meta name="keywords" content="blog,developer,AI,ML,BI,DataScience">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Estimation and Prediction Linear Regression"/>
+<meta name="twitter:description" content="Linear Regression - Illustrative Example   Linear Regression
+  Inference of Parameters - Significance of Estimate  The final equation for LR (vectorised format):
+$$ \hat{Y} = h_{\Theta}(X) = \Theta.X = [\Theta_0 &#43; \Theta_1X_1 &#43; \Theta_2X_2 &#43; \ldots &#43; \Theta_nX_n] $$ MSE (Mean Square Function) - cost function of LR model:
+$$ MSE(X, h_\Theta) = \frac{1}{n} \sum_{i=1}^{n}(Theta^{T}\cdot X_{(i)}-y_{(i)})^2 $$ The estimated coefficients:
+$$ [(X^T\cdot X) - \ ^1X^{T}\cdot Y] $$  Steps to Build a Linear Regression Model  Data cleaning - missing calues and outlier treatment Check for multi-collinearity Feature selection Build the Model on Train Data Performance evalution on the test data  "/>
+
+    <meta property="og:title" content="Estimation and Prediction Linear Regression" />
+<meta property="og:description" content="Linear Regression - Illustrative Example   Linear Regression
+  Inference of Parameters - Significance of Estimate  The final equation for LR (vectorised format):
+$$ \hat{Y} = h_{\Theta}(X) = \Theta.X = [\Theta_0 &#43; \Theta_1X_1 &#43; \Theta_2X_2 &#43; \ldots &#43; \Theta_nX_n] $$ MSE (Mean Square Function) - cost function of LR model:
+$$ MSE(X, h_\Theta) = \frac{1}{n} \sum_{i=1}^{n}(Theta^{T}\cdot X_{(i)}-y_{(i)})^2 $$ The estimated coefficients:
+$$ [(X^T\cdot X) - \ ^1X^{T}\cdot Y] $$  Steps to Build a Linear Regression Model  Data cleaning - missing calues and outlier treatment Check for multi-collinearity Feature selection Build the Model on Train Data Performance evalution on the test data  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://skubidu.github.io/blog/art003/" />
+<meta property="article:published_time" content="2019-12-11T10:24:25+01:00" />
+<meta property="article:modified_time" content="2019-12-11T10:24:25+01:00" />
+
+
+    
+      <base href="https://skubidu.github.io/blog/art003/">
+    
+    <title>
+  Estimation and Prediction Linear Regression · My Website
+</title>
+
+    
+      <link rel="canonical" href="https://skubidu.github.io/blog/art003/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://skubidu.github.io/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://skubidu.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://skubidu.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.60.1" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://skubidu.github.io/">
+      My Website
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/blog/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://skubidu.github.io/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Estimation and Prediction Linear Regression</h1>
+    </header>
+
+    <h1 id="linear-regression--illustrative-example">Linear Regression - Illustrative Example</h1>
+<figure>
+    <img src="https://skubidu.github.io/images/LinReg.jpg"
+         alt="Linear Regression"/> <figcaption>
+            <p>Linear Regression</p>
+        </figcaption>
+</figure>
+
+<h1 id="inference-of-parameters--significance-of-estimate">Inference of Parameters - Significance of Estimate</h1>
+<ul>
+<li>The final equation for LR (vectorised format):<br>
+$$
+\hat{Y} = h_{\Theta}(X) = \Theta.X = [\Theta_0 + \Theta_1X_1 + \Theta_2X_2 + \ldots + \Theta_nX_n]
+$$</li>
+<li>MSE (Mean Square Function) - cost function of LR model:<br>
+$$
+MSE(X, h_\Theta) = \frac{1}{n} \sum_{i=1}^{n}(Theta^{T}\cdot X_{(i)}-y_{(i)})^2
+$$</li>
+<li>The estimated coefficients:<br>
+$$
+[(X^T\cdot X) - \ ^1X^{T}\cdot Y]
+$$</li>
+</ul>
+<h1 id="steps-to-build-a-linear-regression-model">Steps to Build a Linear Regression Model</h1>
+<ol>
+<li>Data cleaning - missing calues and outlier treatment</li>
+<li>Check for multi-collinearity</li>
+<li>Feature selection</li>
+<li>Build the Model on Train Data</li>
+<li>Performance evalution on the test data</li>
+</ol>
+
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
